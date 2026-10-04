@@ -4,21 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Boho Spa | Sérénité Naturelle - Libreville</title>
-<meta name="robots" content="index, follow">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-
 <div class="header">
+ <div class="logo-wrap">
+ <img src="logo.png" class="logo-img" alt="BOHO SPA">
  <h2>BOHO SPA</h2>
- <div style="display:flex;gap:20px">
- <span onclick="document.getElementById('res-modal').style.display='block'; showMyRes();" style="cursor:pointer"> Mes rendez-vous </span>
- <div class="cart-icon" onclick="toggleCart()"> <span id="cart-count">0</span></div>
+ </div>
+ <div style="display:flex;gap:20px;align-items:center">
+ <span onclick="document.getElementById('res-modal').style.display='block'; showMyRes();" style="cursor:pointer">🌿 Mes rendez-vous</span>
+ <div class="cart-icon" onclick="toggleCart()">👜 <span id="cart-count">0</span></div>
  </div>
 </div>
-
 
 <section class="hero">
  <h1>Sérénité naturelle au cœur de Libreville</h1>
@@ -26,31 +26,67 @@
  <button class="btn" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Voir les soins</button>
 </section>
 
-
 <section id="services" class="gallery">
- <!-- DUPLICA ESTE BLOQUE PARA TENER 10 -->
+ <!-- AHORA CON TUS JPG SEPARADOS - solo cambia el nombre -->
  <div class="card">
- <div class="card-img"><img src="https://picsum.photos/400/400?random=1"><div class="card-desc">Massage relaxant 60min aux huiles de karité</div></div>
+ <div class="card-img"><img src="masaje1.jpg"><div class="card-desc">Massage relaxant 60min aux huiles de karité</div></div>
  <div class="card-body"><h3>Massage Bohème</h3><div class="price">25.000 FCFA</div><button class="btn" onclick="addService('Massage Bohème',25000)">Ajouter</button></div>
  </div>
- <div class="card"><div class="card-img"><img src="https://picsum.photos/400/400?random=2"><div class="card-desc">Gommage doux sucre & coco</div></div><div class="card-body"><h3>Gommage Coco</h3><div class="price">15.000 FCFA</div><button class="btn" onclick="addService('Gommage Coco',15000)">Ajouter</button></div></div>
- <div class="card"><div class="card-img"><img src="https://picsum.photos/400/400?random=3"><div class="card-desc">Soin visage argile verte purifiante</div></div><div class="card-body"><h3>Soin Visage</h3><div class="price">20.000 FCFA</div><button class="btn" onclick="addService('Soin Visage',20000)">Ajouter</button></div></div>
- <div class="card"><div class="card-img"><img src="https://picsum.photos/400/400?random=4"><div class="card-desc">Pédicure spa avec vernis naturel</div></div><div class="card-body"><h3>Pédicure Boho</h3><div class="price">18.000 FCFA</div><button class="btn" onclick="addService('Pedicure Boho',18000)">Ajouter</button></div></div>
- <div class="card"><div class="card-img"><img src="https://picsum.photos/400/400?random=5"><div class="card-desc">Hammam & gommage noir</div></div><div class="card-body"><h3>Rituel Hammam</h3><div class="price">30.000 FCFA</div><button class="btn" onclick="addService('Rituel Hammam',30000)">Ajouter</button></div></div>
- <!-- añade 5 más igual -->
+
+ <div class="card">
+ <div class="card-img"><img src="gommage.jpg"><div class="card-desc">Gommage doux sucre & coco</div></div>
+ <div class="card-body"><h3>Gommage Coco</h3><div class="price">15.000 FCFA</div><button class="btn" onclick="addService('Gommage Coco',15000)">Ajouter</button></div>
+ </div>
+
+ <div class="card">
+ <div class="card-img"><img src="visage.jpg"><div class="card-desc">Soin visage argile verte purifiante</div></div>
+ <div class="card-body"><h3>Soin Visage</h3><div class="price">20.000 FCFA</div><button class="btn" onclick="addService('Soin Visage',20000)">Ajouter</button></div>
+ </div>
+
+ <div class="card">
+ <div class="card-img"><img src="pedicure.jpg"><div class="card-desc">Pédicure spa avec vernis naturel</div></div>
+ <div class="card-body"><h3>Pédicure Boho</h3><div class="price">18.000 FCFA</div><button class="btn" onclick="addService('Pedicure Boho',18000)">Ajouter</button></div>
+ </div>
+
+ <div class="card">
+ <div class="card-img"><img src="hammam.jpg"><div class="card-desc">Hammam & gommage noir</div></div>
+ <div class="card-body"><h3>Rituel Hammam</h3><div class="price">30.000 FCFA</div><button class="btn" onclick="addService('Rituel Hammam',30000)">Ajouter</button></div>
+ </div>
+
+ <div class="card">
+ <div class="card-img"><img src="piedras.jpg"><div class="card-desc">Massage pierres chaudes 90min</div></div>
+ <div class="card-body"><h3>Pierres Chaudes</h3><div class="price">35.000 FCFA</div><button class="btn" onclick="addService('Pierres Chaudes',35000)">Ajouter</button></div>
+ </div>
+
+ <div class="card">
+ <div class="card-img"><img src="aroma.jpg"><div class="card-desc">Aromathérapie relaxante</div></div>
+ <div class="card-body"><h3>Aromathérapie</h3><div class="price">22.000 FCFA</div><button class="btn" onclick="addService('Aromatherapie',22000)">Ajouter</button></div>
+ </div>
+
+ <div class="card">
+ <div class="card-img"><img src="manicure.jpg"><div class="card-desc">Manucure + soin mains</div></div>
+ <div class="card-body"><h3>Manucure Spa</h3><div class="price">15.000 FCFA</div><button class="btn" onclick="addService('Manucure Spa',15000)">Ajouter</button></div>
+ </div>
+
+ <div class="card">
+ <div class="card-img"><img src="detox.jpg"><div class="card-desc">Détox corps complet + sauna</div></div>
+ <div class="card-body"><h3>Détox & Relax</h3><div class="price">30.000 FCFA</div><button class="btn" onclick="addService('Detox',30000)">Ajouter</button></div>
+ </div>
+
+ <div class="card">
+ <div class="card-img"><img src="duo.jpg"><div class="card-desc">Massage duo pour couples</div></div>
+ <div class="card-body"><h3>Rituel Duo</h3><div class="price">50.000 FCFA</div><button class="btn" onclick="addService('Rituel Duo',50000)">Ajouter</button></div>
+ </div>
+
 </section>
 
-
 <section class="about-section">
- <div class="about-text"><h2>À propos de nous</h2><p>Boho Spa est né du désir d'offrir une parenthèse de douceur à Libreville. Produits 100% naturels, équipe formée, ambiance boho-chic.</p></div>
+ <div class="about-text"><h2>À propos de nous</h2><p>Boho Spa est né du désir d'offrir une parenthèse de douceur à Libreville. Produits 100% naturels, équipe formée, ambiance boho-chic. Serviettes chaudes, ponctualité, une cliente à la fois.</p></div>
  <div class="mapa"><iframe src="https://maps.google.com/maps?q=Libreville&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0"></iframe></div>
 </section>
 
-
 <footer><a href="#" onclick="alert('Politique de confidentialité: Aucune donnée vendue.')">Confidentialité</a> | <a href="#" onclick="alert('Cookies: Uniquement pour mémoriser votre panier.')">Cookies</a><br><br><span style="opacity:0.3">Admin: /admin-boho-2026.html</span></footer>
 
-
-<!-- CARRITO -->
 <div id="cart-modal">
  <h2>Votre panier</h2><div id="cart-items"></div>
  <hr><div id="cart-total"></div>
@@ -61,22 +97,20 @@
  <button class="btn-close" onclick="toggleCart()">Fermer</button>
 </div>
 
-
 <div id="res-modal"><div class="modal-content"><h3>Mes Réservations</h3><div id="my-reservas"></div><button class="btn" onclick="this.parentElement.parentElement.style.display='none'">Fermer</button></div></div>
-
 
 <script>
 let cart=[],total=0;
-function addService(n,p){cart.push({n,p});total+=p;document.getElementById('cart-count').innerText=cart.length;renderCart()}
+function addService(n,p){cart.push({n,p});total+=p;document.getElementById('cart-count').innerText=cart.length;renderCart();document.getElementById('cart-modal').classList.add('open')}
 function renderCart(){let h='';cart.forEach(c=>h+=`<p>${c.n} - ${c.p} FCFA</p>`);document.getElementById('cart-items').innerHTML=h;document.getElementById('cart-total').innerText='Total: '+total+' FCFA'}
 function toggleCart(){document.getElementById('cart-modal').classList.toggle('open')}
 function orderWhatsApp(){
  let d=document.getElementById('res-date').value,t=document.getElementById('res-time').value;
  if(!d||!t){alert('Choisissez date et heure');return}
- let msg=`NOUVELLE RESERVATION BOHO SPA (ACOMPTE 5000):%0A`;cart.forEach(c=>msg+=`- c.n%0A`);msg+=`Date:{d} Heure:tTotal:{total}`;
+ let msg=`NOUVELLE RESERVATION BOHO SPA (ACOMPTE 5000):%0A`;cart.forEach(c=>msg+=`- ${c.n}%0A`);msg+=`Date:${d} Heure:${t} Total:${total}`;
  let r=JSON.parse(localStorage.getItem('boho_res')||'[]');r.push({date:d,time:t,total,cart});localStorage.setItem('boho_res',JSON.stringify(r));
  let a=JSON.parse(localStorage.getItem('boho_admin')||'[]');a.push({date:d,time:t,total,cart,status:'PENDIENTE'});localStorage.setItem('boho_admin',JSON.stringify(a));
- window.open(`https://wa.me/241077000000?text=${msg}`,'_blank');
+ window.open(`https://wa.me/24162516457?text=${msg}`,'_blank');
  cart=[];total=0;renderCart();document.getElementById('cart-count').innerText='0';toggleCart();showMyRes();
 }
 function showMyRes(){let r=JSON.parse(localStorage.getItem('boho_res')||'[]');let h=r.length?'':'Aucune réservation';r.forEach(x=>h+=`<p class="res-line">${x.date} à ${x.time} - ${x.total} FCFA</p>`);document.getElementById('my-reservas').innerHTML=h}
@@ -84,3 +118,4 @@ showMyRes();
 </script>
 </body>
 </html>
+
