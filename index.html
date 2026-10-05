@@ -118,7 +118,7 @@
 
 <script>
 let cart=[],total=0;
-function addService(n,p){cart.push({n,p});total+=p;document.getElementById('cart-count').innerText=cart.length;renderCart();
+function addService(n,p){cart.push({n,p});total+=p;document.getElementById('cart-count').innerText=cart.length;renderCart();document.getElementById('cart-modal')
 function renderCart(){let h='';cart.forEach(c=>h+=`<p>${c.n} - ${c.p} FCFA</p>`);document.getElementById('cart-items').innerHTML=h;document.getElementById('cart-total').innerText='Total: '+total+' FCFA'}
 function toggleCart(){document.getElementById('cart-modal').classList.toggle('open')}
 function orderWhatsApp(){
